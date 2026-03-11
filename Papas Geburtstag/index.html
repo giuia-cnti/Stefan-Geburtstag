@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stefans 60. Geburtstag</title>
+
+<style>
+:root {
+    --dark-blue: #0a2538;
+    --white: #ffffff;
+    --accent-orange: #f3a633;
+    --accent-green: #7dc242;
+    --accent-pink: #d881b4;
+}
+
+body {
+    font-family: 'Arial Black', sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 3px 3px 0px rgba(255,255,255,0.1);
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* MAP */
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    border: 0;
+}
+
+/* FOTO SLIDER */
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.slides {
+    display: flex;
+    width: calc(315px * 9);
+    animation: slide 30s infinite;
+}
+
+.slides img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 5px solid white;
+    background: #1a3a52;
+    transform: rotate(-3deg);
+}
+
+.slides img:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+/* Animation */
+
+@keyframes slide {
+
+0% {transform: translateX(0);}
+10% {transform: translateX(0);}
+
+20% {transform: translateX(-315px);}
+30% {transform: translateX(-315px);}
+
+40% {transform: translateX(-630px);}
+50% {transform: translateX(-630px);}
+
+60% {transform: translateX(-945px);}
+70% {transform: translateX(-945px);}
+
+80% {transform: translateX(-1260px);}
+90% {transform: translateX(-1260px);}
+
+100% {transform: translateX(0);}
+}
+
+/* RSVP */
+
+.rsvp-box {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #69a336;
+}
+
+footer {
+    padding: 40px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>STEFANS <span style="display:block; font-size:5rem;">60.</span> GEBURTSTAG</h1>
+<p>Ein Abend mit guter Musik, leckeren Drinks und tollen Leuten!</p>
+</header>
+
+<hr style="border: 2px solid #d881b4; width: 50px;">
+
+<section>
+<h2>WANN & WO</h2>
+
+<p>
+<strong>8. AUGUST 2026</strong><br>
+Ab 17:00 Uhr
+</p>
+
+<p>
+Hundeplatz Mömlingen<br>
+63853 Mömlingen
+</p>
+
+<div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.5!2d9.2!3d49.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDQ4JzAwLjAiTiA5wrAxMicwMC4wIkU!5e0!3m2!1sde!2sde!4v1620000000000!5m2!1sde!2sde" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</section>
+
+<section>
+<h2>HIGHLIGHTS AUS 60 JAHREN</h2>
+
+<div class="slider">
+<div class="slides">
+
+<img src="foto1.jpg" alt="">
+<img src="foto2.jpg" alt="">
+<img src="foto3.jpg" alt="">
+<img src="foto4.jpg" alt="">
+<img src="foto5.jpg" alt="">
+<img src="foto6.jpg" alt="">
+<img src="foto7.jpg" alt="">
+<img src="foto8.jpg" alt="">
+<img src="foto9.jpg" alt="">
+
+</div>
+</div>
+
+</section>
+
+<section id="anmeldung">
+
+<div class="rsvp-box">
+
+<h2>BIST DU DABEI?</h2>
+
+<p>Gib mir bitte bis zum 10. Juni Bescheid.</p>
+
+<form action="https://formspree.io/f/DEINE_ID_HIER" method="POST">
+
+<label>Dein Name:</label>
+<input type="text" name="name" placeholder="Vor- und Nachname" required>
+
+<label>Kommst du?</label>
+<select name="status">
+<option value="ja">Ja, ich bin dabei!</option>
+<option value="vielleicht">Vielleicht</option>
+<option value="nein">Leider nein</option>
+</select>
+
+<label>Besonderheiten (Essen/Allergien):</label>
+<input type="text" name="notiz" placeholder="z.B. Vegetarisch">
+
+<button type="submit">Absenden</button>
+
+</form>
+
+</div>
+</section>
+
+<footer>
+<p>Ich freu mich auf euch! – Stefan</p>
+</footer>
+
+</body>
+</html>
